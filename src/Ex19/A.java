@@ -12,7 +12,7 @@ public class A extends JPanel {
         AffineTransform t = new AffineTransform();
 
         t.scale(1, -1);
-        t.translate(100,-100);
+//        t.translate(100,-100);
         g2d.setTransform(t);
         g2d.drawLine(-100, 0, 0, 0);
         g2d.setTransform(saveAT);
@@ -32,7 +32,8 @@ class B extends JFrame{
     A myPanel=null;
     public B(){
         super("Andrzej Gierlak SA©");
-        setSize(100,100);
+        setSize(300,300);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         myPanel=new A();
         setContentPane(myPanel);
